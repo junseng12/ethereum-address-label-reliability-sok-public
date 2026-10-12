@@ -1,0 +1,16 @@
+﻿Dataset,Raw Source,Normalized Root Source Set,Root Source Information Completeness,정규화·해석 비고
+BERT4ETH,Etherscan phish-hack; Ethereum random EOA sampling,Etherscan,Complete,random EOA sampling은 Negative 구성 방법이며 label Root Source Set과 분리
+EtherScamDB,EtherScamDB Community Registry,EtherScamDB,Complete,community registry 자체를 Root로 유지
+Ethereum Illicit Accounts (Farrugia et al.),EtherScamDB historical snapshot; Ethereum active-account random sample,EtherScamDB,Complete,active-account sampling은 Negative 구성 방법이며 label Root Source Set과 분리
+EthereumHeist,Etherscan heist/name-tag,Etherscan,Complete,Etherscan canonicalization
+FDGNN Fraud Address Dataset,XBlock; Etherscan; CryptoScamDB; prior Ponzi dataset,CryptoScamDB | Etherscan | Prior Ponzi Dataset,Partial,XBlock은 Etherscan leaf Root로 resolve; prior Ponzi dataset의 로컬 원천명이 포괄적
+Forta Labelled Datasets,Etherscan phish-hack/exploit/heist lists,Etherscan,Complete,Etherscan 목록명을 canonicalization
+OFAC Ethereum Addresses,OFAC Enhanced SDN,OFAC,Complete,공식 OFAC SDN
+Phishing Detection on Ethereum (Trans2Vec),EtherScamDB; Etherscan,EtherScamDB | Etherscan,Complete,두 확인 원천 보존
+Real-CATS,Chainabuse; WalletExplorer; Etherscan; Real-CATS supplemental source,Chainabuse | Etherscan | Real-CATS Supplemental Source (Unspecified) | WalletExplorer,Partial,supplemental source의 세부 원천이 공개 파일에서 특정되지 않음
+RiskProp,Etherscan labels,Etherscan,Complete,Etherscan canonicalization
+XBlock Ethereum Phishing Transaction Network,Etherscan phish-hack; Etherscan 2-hop crawl,Etherscan,Complete,2-hop crawl은 graph 구성 방식이며 label Root는 Etherscan
+scamsonethereum,Mixed 14 blacklists; prior research; Etherscan,Etherscan | Multiple Blacklists | Prior Research,Partial,14개 blacklist와 prior research의 세부 이름이 모두 보존되지 않음
+DA-HGNN Phishing Detection Dataset,Etherscan phishing labels,Etherscan,Complete,Etherscan canonicalization
+EX-Graph – Wash-Trading,Dune Analytics wash-trading identification,Dune Analytics,Complete,Dune detection result
+Cryptocurrency Exchange Scams - Ethereum subset,EtherScamDB; CryptoScamDB; typosquatting search,CryptoScamDB | EtherScamDB | Typosquatting Search,Complete,공개 연구의 upstream report와 typosquatting construction을 leaf 수준으로 보존

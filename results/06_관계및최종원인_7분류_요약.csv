@@ -1,0 +1,23 @@
+﻿분석 단계,분류,구성·판정 기준,Pair-Address,분모,비율,고유 주소,해석,해석 근거·주의사항
+관계 유형 7분류,Same Label,Same Label,18278,104673,17.462001%,5817,동일 비교축의 구조화 Claim이 같다.,Original Label 문자열이 아니라 표준화된 Character·Axis·Type Claim의 동일성을 사용했다.
+관계 유형 7분류,Compatible Label,Compatible Label,17571,104673,16.786564%,5861,공통 유형 구성요소가 있거나 추가 속성축이 병존해 의미상 양립 가능하다.,OR 복합 라벨의 공통 구성요소는 호환으로 보되 Phishing↔Scam 특별 호환 규칙은 제거했다.
+관계 유형 7분류,Granularity Difference,Granularity Difference,36008,104673,34.400466%,6565,포괄 라벨과 구체 라벨의 정보량이 다르다.,Unspecified Abnormal과 구체 Behavior를 직접 충돌시키지 않았다.
+관계 유형 7분류,Uncertain / Coverage Difference,Uncertain Comparison + Label Coverage Difference,22289,104673,21.293934%,18530,미확인 라벨이 포함되어 직접 의미 충돌을 확정할 수 없다.,"Uncertain Comparison 17,355 + Label Coverage Difference 4,934."
+관계 유형 7분류,Axis Difference,Status–Behavior Relation + Axis Difference,9,104673,0.008598%,6,Behavior·Status·Role·Technical Attribute처럼 의미축이 다르다.,Status–Behavior Relation 7 + 기타 Axis Difference 2.
+관계 유형 7분류,Taxonomy Conflict,Taxonomy Conflict,10512,104673,10.042704%,2183,같은 Behavior 축에서 공통 구성요소가 없는 구체 Abnormal 유형이 다르다.,엄격 기준으로 Phishing↔Scam 및 Phishing|Hack/Exploit↔Scam을 포함한다. 실제 오류 확정이 아니라 개별검증 후보이다.
+관계 유형 7분류,Strong Conflict,Strong Conflict,6,104673,0.005732%,5,같은 비교축에서 Abnormal과 명시적 Normal이 직접 대립한다.,가장 우선 검증하되 weak negative·specialized heuristic 가능성을 확인해야 한다.
+주요 충돌 개별검증 현황,개별검증 완료(기존 주요 충돌),기존 Taxonomy 27 + Strong 6,33,10518,0.313748%,19,원자료·구축 방식·외부 사건 근거까지 개별 확인한 부분집합이다.,"기존 33건의 최종 원인 분류는 보존하지만 신규 Taxonomy 10,485건으로 일반화하지 않는다."
+주요 충돌 개별검증 현황,개별검증 필요(엄격 기준 신규 Taxonomy),Phishing–Scam 특별 호환 규칙 제거,10485,10518,99.686252%,2169,엄격 taxonomy 규칙으로 새로 선별됐으며 사건 단위 원인은 아직 확정하지 않았다.,"Phishing↔Scam 7,162 Pair와 복합 Phishing|Hack/Exploit↔Scam 3,323 Pair를 층화 검증해야 한다."
+기존 33 Pair 개별검증 최종 원인 7분류,Multi-behavior,동일 주소의 서로 다른 독립 행위가 모두 사건 근거로 확인된 경우,0,33,0.000000%,0,동일 주소의 서로 다른 독립 행위가 모두 사건 근거로 확인된 경우,Phishing↔Wash Trading 후보는 거래 참여 weak label로 확인되어 실제 복수 행위로 확정하지 않았다.
+기존 33 Pair 개별검증 최종 원인 7분류,Taxonomy Difference,같은 사건·행위를 데이터셋이 서로 다른 관점의 유형으로 명명한 경우,2,33,6.060606%,2,같은 사건·행위를 데이터셋이 서로 다른 관점의 유형으로 명명한 경우,CreatureToadz와 Coinrail은 동일 사건 또는 동일 주소 맥락을 서로 다른 semantic perspective로 표현한 사례다.
+기존 33 Pair 개별검증 최종 원인 7분류,Coverage / GT Construction Difference,분석 단위·GT 구성·라벨 구체성이 달라 동일 주소의 서로 다른 정보 범위를 포착한 경우,15,33,45.454545%,6,분석 단위·GT 구성·라벨 구체성이 달라 동일 주소의 서로 다른 정보 범위를 포착한 경우,"Dune 거래 참여→주소 라벨 전파, weak benign 표본, Wallet Drainer↔broad Phishing 관계가 여기에 해당한다."
+기존 33 Pair 개별검증 최종 원인 7분류,Temporal Evolution,서로 다른 시점에 주소의 실제 역할·행위가 변했다는 사건 근거가 확인된 경우,0,33,0.000000%,0,서로 다른 시점에 주소의 실제 역할·행위가 변했다는 사건 근거가 확인된 경우,날짜가 다른 것만으로 분류하지 않았다. CoinDash 사건은 정상 라벨보다 먼저 발생해 시간 변화가 원인이 아니었다.
+기존 33 Pair 개별검증 최종 원인 7분류,GT / Label Error,공식 사건 자료 또는 반복 패턴이 한쪽 원천·데이터셋 라벨의 부정확성을 지지하는 경우,6,33,18.181818%,4,공식 사건 자료 또는 반복 패턴이 한쪽 원천·데이터셋 라벨의 부정확성을 지지하는 경우,0xhabitat·FinNexus의 사건유형 오표현과 CoinDash·Real-CATS weak-negative false negative를 포함한다.
+기존 33 Pair 개별검증 최종 원인 7분류,Processing Difference,수집·매핑·task 변환에서 원천 의미가 축소·변형된 경우,9,33,27.272727%,8,수집·매핑·task 변환에서 원천 의미가 축소·변형된 경우,BERT4ETH phisher_account가 Etherscan phish-hack/heist 주소를 Phishing 단일형으로 축소한 사례가 중심이다.
+기존 33 Pair 개별검증 최종 원인 7분류,Unresolved,공개 원자료만으로 어느 설명이 우세한지 결정할 수 없는 경우,1,33,3.030303%,1,공개 원자료만으로 어느 설명이 우세한지 결정할 수 없는 경우,0xa3da2a…는 EX-Graph 거래 2건만으로 wash 여부를 재현할 수 없고 Real-CATS benign도 확정 정상 근거가 아니다.
+Root Source Relation 3분류,동일,Dataset-level Label Construction Source Set,27986,86395,32.393078%,,두 Dataset의 정규화 Root Source Set이 동일,개별 주소의 실제 유입 경로나 완전한 정보 독립성을 증명하지 않음
+Root Source Relation 3분류,일부 공유,Dataset-level Label Construction Source Set,40271,86395,46.612651%,,하나 이상의 Root를 공유하지만 전체 Set은 다름,개별 주소의 실제 유입 경로나 완전한 정보 독립성을 증명하지 않음
+Root Source Relation 3분류,서로 다름,Dataset-level Label Construction Source Set,18138,86395,20.994271%,,현재 확인 가능한 Source Set 사이에 공통 Root가 없음,개별 주소의 실제 유입 경로나 완전한 정보 독립성을 증명하지 않음
+기존 Unknown 재배정,확인 불가 → 동일,Dataset-level Source Set으로 처음부터 재계산,0,33793,0.000000%,,기존 주소별 provenance 불명확성을 Dataset-level Source Set 관계로 재표현,Unknown을 임의 대체한 것이 아니라 분석 단위를 변경한 결과
+기존 Unknown 재배정,확인 불가 → 일부 공유,Dataset-level Source Set으로 처음부터 재계산,27681,33793,81.913414%,,기존 주소별 provenance 불명확성을 Dataset-level Source Set 관계로 재표현,Unknown을 임의 대체한 것이 아니라 분석 단위를 변경한 결과
+기존 Unknown 재배정,확인 불가 → 서로 다름,Dataset-level Source Set으로 처음부터 재계산,6112,33793,18.086586%,,기존 주소별 provenance 불명확성을 Dataset-level Source Set 관계로 재표현,Unknown을 임의 대체한 것이 아니라 분석 단위를 변경한 결과

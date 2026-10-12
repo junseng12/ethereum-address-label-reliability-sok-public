@@ -1,0 +1,107 @@
+{
+  "source_01": "results/01_전처리_주소라벨_통합표.csv",
+  "output_01_rows": 3641219,
+  "original_triplet_sha256": "af7cc404826e7ef16279f6adb7cf8a7e2d2bbc9a96e7433d76dca42683949adf",
+  "mapping_rules": 6679,
+  "intersection_addresses": 24495,
+  "pair_rows": 104673,
+  "cause_rows": 86395,
+  "relation_counts": {
+    "Label Coverage Difference": 4934,
+    "Compatible Label": 17571,
+    "Same Label": 18278,
+    "Granularity Difference": 36008,
+    "Taxonomy Conflict": 10512,
+    "Uncertain Comparison": 17355,
+    "Status–Behavior Relation": 7,
+    "Strong Conflict": 6,
+    "Axis Difference": 2
+  },
+  "validation": "passed_strict_label_and_dataset_root_source_set",
+  "dataset_rows": {
+    "XBlock Ethereum Phishing Transaction Network": 2969643,
+    "Real-CATS": 40872,
+    "EX-Graph – Wash-Trading": 2771,
+    "BERT4ETH": 594699,
+    "Forta Labelled Datasets": 12153,
+    "scamsonethereum": 6947,
+    "Ethereum Illicit Accounts (Farrugia et al.)": 4413,
+    "FDGNN Fraud Address Dataset": 4152,
+    "RiskProp": 651,
+    "EtherScamDB": 2104,
+    "Phishing Detection on Ethereum (Trans2Vec)": 1207,
+    "DA-HGNN Phishing Detection Dataset": 1290,
+    "Cryptocurrency Exchange Scams - Ethereum subset": 110,
+    "OFAC Ethereum Addresses": 95,
+    "EthereumHeist": 112
+  },
+  "before_relation_counts": {
+    "Label Coverage Difference": 4934,
+    "Same Label": 37181,
+    "Compatible Label": 44671,
+    "Uncertain Comparison": 17355,
+    "Taxonomy Conflict": 524,
+    "Status–Behavior Relation": 2,
+    "Strong Conflict": 6
+  },
+  "comparison": {
+    "changed_rules": 96,
+    "changed_pair_relations": 51396,
+    "representatives": 143
+  },
+  "strict_taxonomy_policy": {
+    "enabled": true,
+    "rule": "Phishing과 Scam을 서로 다른 구체 Behavior 유형으로 판정",
+    "moved_compatible_to_taxonomy_pairs": 10485,
+    "moved_unique_addresses": 2169,
+    "taxonomy_pairs": 10512,
+    "taxonomy_unique_addresses": 2183,
+    "strong_pairs": 6,
+    "strong_unique_addresses": 5,
+    "major_pairs": 10518,
+    "major_unique_addresses": 2188,
+    "individually_verified_pairs": 33,
+    "pending_verification_pairs": 10485
+  },
+  "result_sha256": {
+    "04_중복주소_데이터셋Pair비교.csv": "a2883f8b1f428984fd55162358206ae27751e3a38d28c03aeaaa5d608aaf5d9f",
+    "05_충돌주소_원인분석.csv": "34da2ccaff4350a11eb933c9d1d635f9bd2efeedc5a4e96c2c7ee92994845ba0",
+    "06_관계및최종원인_7분류_요약.csv": "42f8e1be16308d8956f85998e130b0341a51b751708d9958f23db5b28e0c9a0b",
+    "07_주요충돌_개별검증_최종해석.csv": "cd42a07062c019259c9d2dab1589e7ce91b80403b65d782c2a644accb261d434",
+    "Root_Source_Set_정규화.csv": "67efcb8a9aa934ca58b7ac93a8e75b3d210b0273741d04d3aa535e6ea637480a",
+    "ANALYSIS_REPORT.md": "5ea18809bddbeac543803c542c4b624a111c5f4c4a1b0ccf245ee3d3b29e75b9",
+    "restandardize_label_analysis.py": "c88a551a27fff6302caf3da5ebd229e0e593fe470649de782a70ca6398dafa1c"
+  },
+  "root_source_set_policy": {
+    "enabled": true,
+    "unit": "Dataset-level Label Construction Source Set",
+    "relations": [
+      "동일",
+      "일부 공유",
+      "서로 다름"
+    ],
+    "information_completeness": [
+      "Complete",
+      "Partial"
+    ],
+    "before": {
+      "확인 불가": 33793,
+      "동일": 11242,
+      "서로 다름": 38407,
+      "일부 공유": 2953
+    },
+    "after": {
+      "일부 공유": 40271,
+      "동일": 27986,
+      "서로 다름": 18138
+    },
+    "old_unknown_reassignment": {
+      "일부 공유": 27681,
+      "서로 다름": 6112
+    },
+    "verified_33_root_relation_changed": 13,
+    "verified_33_final_cause_changed": 0,
+    "backup_dir": "not included in replication package",
+    "limitation": "Dataset-level Source Set overlap does not prove address-level provenance or complete independence"
+  }
+}
