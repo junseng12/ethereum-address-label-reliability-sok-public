@@ -55,8 +55,8 @@ ANALYSIS_REPORT.md 최종 방법론과 해석
 
 ```bash
 git lfs install
-git clone https://github.com/goneii/Anomaly-Detection.git
-cd Anomaly-Detection
+git clone https://github.com/junseng12/ethereum-address-label-reliability-sok.git
+cd ethereum-address-label-reliability-sok
 git lfs pull
 ```
 
@@ -73,7 +73,7 @@ Git LFS가 이미 정상 설정된 컴퓨터에서는 `git clone` 과정에서 �
 2. `Add people`에서 선배님의 GitHub 계정 또는 이메일을 입력합니다.
 3. 초대 수락 후 아래 주소를 전달합니다.
 
-`https://github.com/goneii/Anomaly-Detection`
+`https://github.com/junseng12/ethereum-address-label-reliability-sok`
 
 웹에서 결과만 확인할 수 있지만, 전체 입력 파일까지 내려받으려면 위의 Git LFS 명령을 사용해야 합니다.
 
