@@ -15,7 +15,7 @@
 | 구분 | 15개 분석 데이터셋 내 구성 | 의미 |
 |---|---|---|
 | Root 데이터셋 (2) | EtherScamDB, OFAC Ethereum Addresses | 자체 Registry 또는 공식 지정 목록을 직접 제공 |
-| Non-Root 데이터셋 (13) | 나머지 13개 데이터셋 | Etherscan, EtherScamDB 등 기존 원천을 가공하거나 표본·그래프·라벨을 재구성 |
+| Non-Root 데이터셋 (13) | BERT4ETH, Farrugia, EthereumHeist, FDGNN, Forta, Trans2Vec, Real-CATS, RiskProp, XBlock, scamsonethereum, DA-HGNN, EX-Graph, Cryptocurrency Exchange Scams | Etherscan, EtherScamDB 등 기존 원천을 가공하거나 표본·그래프·라벨을 재구성 |
 
 15개는 모두 동일하게 주소 비교에 포함했습니다. Root/Non-Root 구분은 분석 대상을 제외하기 위한 기준이 아니라, 같은 주소와 라벨이 여러 데이터셋에서 발견됐을 때 **서로 독립적인 확인인지 동일 원천의 재사용인지** 해석하기 위한 메타정보입니다.
 
