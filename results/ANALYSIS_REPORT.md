@@ -266,6 +266,7 @@ Root 변화는 Dataset-level 정보 계보 context를 보완하지만 개별 주
 - `05_충돌주소_원인분석.csv`: 변경된 Taxonomy의 Root×Label×Time 해석 반영
 - `06_관계및최종원인_7분류_요약.csv`: 엄격 관계 분포와 검증 현황 반영
 - `07_주요충돌_개별검증_최종해석.csv`: 10,518개 주요 Pair 전체와 Root 변화·검증 상태 수록
+- `08_라벨링패러다임_Research_vs_Community_분석.csv`: Research/Community 패러다임별 구체 Behavior 충돌률과 Root Source 교차 결과
 - `Root_Source_Set_정규화.csv`: 15개 Dataset의 Raw Source·정규화 Source Set·완전성
 - `ANALYSIS_REPORT.md`: 엄격 기준 최종 결과와 한계 정리
 
@@ -280,3 +281,46 @@ Root 변화는 Dataset-level 정보 계보 context를 보완하지만 개별 주
 
 - Root 분석 86,395 Pair는 동일 27,986 / 일부 공유 40,271 / 서로 다름 18,138이며 Unknown은 0이다.
 - Root 변경 전후 Label Relationship 및 Temporal Relation 분포는 동일하다.
+
+## 12. Research-based vs Community-based 라벨링 패러다임
+
+### 분석 정의
+
+- **Research-based (8개)**: BERT4ETH, XBlock, Trans2Vec, RiskProp, DA-HGNN, EthereumHeist, Forta Labelled, FDGNN
+- **Community-based (5개)**: scamsonethereum, EtherScamDB, Farrugia, Cryptocurrency Exchange Scams, Real-CATS
+- **분류 제외 (2개)**: EX-Graph는 Dune 기반 wash-trading 행위 탐지이고, OFAC는 Behavior가 아닌 Status 지정이므로 이 비교에서 제외했다.
+- 비교 단위는 동일 주소에 함께 존재하는 `Dataset A–Dataset B`의 **Pair-Address**이다. 양쪽 모두 `Abnormal`, `Behavior`, 구체 표준 유형인 경우만 비교했으며, 두 표준 유형 구성요소에 교집합이 없으면 유형 충돌로 판정했다.
+
+### 패러다임별 충돌률
+
+| 비교 관계 | 비교 Pair-Address | 유형 충돌 | 충돌률 |
+|---|---:|---:|---:|
+| Research–Research | 18,331 | 6 | 0.03% |
+| Community–Community | 2,232 | 172 | 7.71% |
+| Research–Community | 23,780 | 10,323 | 43.41% |
+
+Research 내부에서는 거의 동일한 유형을 재현하지만, Research와 Community를 교차하면 충돌률이 크게 상승한다. 이는 동일 주소의 실제 상태가 자주 반전됐다는 뜻이라기보다, Research 데이터셋이 주로 `Phishing`을 계승하는 반면 Community 데이터셋은 같은 주소를 더 넓은 `Scam` 분류로 기록하는 **taxonomy 선택 차이**가 크다는 뜻이다.
+
+### Root Source를 함께 고려한 결과
+
+| 비교 관계 | Root Source 관계 | 비교 Pair-Address | 유형 충돌 | 충돌률 |
+|---|---|---:|---:|---:|
+| Research–Research | 공유됨 | 18,331 | 6 | 0.03% |
+| Community–Community | 공유됨 | 100 | 10 | 10.00% |
+| Community–Community | 공유 안 됨 | 2,132 | 162 | 7.60% |
+| Research–Community | 공유됨 | 17,599 | 5,849 | 33.23% |
+| Research–Community | 공유 안 됨 | 6,181 | 4,474 | 72.38% |
+
+Research–Community Pair에서는 Root Source를 공유하지 않을 때 충돌률이 72.38%로 더 높다. 다만 Source를 일부라도 공유하는 경우에도 33.23%이므로, 충돌은 원천 독립성만으로 설명되지 않고 **같은 원천을 서로 다른 분류 체계로 재가공한 영향**도 함께 존재한다.
+
+### 라벨 구성과 핵심 해석
+
+- Research 8개 데이터셋의 Abnormal Dataset-Address 17,288건 중 16,974건(98.18%)은 표준 유형에 `Phishing`을 포함한다.
+- Cross-paradigm 유형 충돌 10,323건 중 `Scam ↔ Phishing`은 6,990건, `Scam ↔ Hack/Exploit | Phishing`은 3,323건이다.
+- 두 유형을 합치면 **10,313건(99.90%)**으로, 교차 패러다임 충돌의 거의 전부가 Community의 `Scam`과 Research의 `Phishing` 포함 라벨 사이에서 발생한다.
+
+따라서 이 결과의 핵심은 “어느 패러다임이 더 정확한가”가 아니다. 동일 주소를 Research 계열은 탐지·seed의 구체 행위인 `Phishing` 중심으로, Community 계열은 신고·registry의 포괄 범주인 `Scam` 중심으로 표현한다는 점이다. 이 차이를 Ground Truth의 독립적인 행위 모순으로 바로 해석하면 충돌을 과대평가할 수 있으므로, 통합 라벨에서는 원본 라벨과 표준 유형을 함께 보존해야 한다.
+
+### 한계
+
+Research/Community는 Dataset-level 구축 방식에 따른 분류이며 개별 주소별 provenance를 뜻하지 않는다. 또한 유형 충돌은 공개 라벨 간 taxonomy 불일치이지, 해당 주소의 실제 on-chain 행위를 개별 검증한 최종 판정은 아니다. 세부 수치와 재현 기준은 `08_라벨링패러다임_Research_vs_Community_분석.csv`에 정리했다.

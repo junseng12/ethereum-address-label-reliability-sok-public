@@ -8,6 +8,7 @@ The `code` directory preserves the scripts used in the research workflow.
 - `phase3/run_analysis.py`: adds the three newer address datasets and applies label-reliability preprocessing.
 - `phase4/audit_account_types.py`: distinguishes EOA, delegated EOA, and conventional contract addresses using on-chain bytecode checks.
 - `phase4/restandardize_label_analysis.py`: generates the final label-attribute mapping, intersection table, pair comparison, conflict-cause table, summary, and individual-review table.
+- `phase5/analyze_labeling_paradigms.py`: reproduces the Research-based versus Community-based label-taxonomy analysis from the final address and standard-type results.
 - `verify_manifest.py`: verifies packaged data files against their recorded SHA-256 checksums.
 
 ## Environment
@@ -23,7 +24,7 @@ phase1/run_address_label_agreement.py
 phase3/run_analysis.py
 phase4/audit_account_types.py
 phase4/restandardize_label_analysis.py
+phase5/analyze_labeling_paradigms.py
 ```
 
 The final repository results correspond to the most recent strict taxonomy and dataset-level root-source-set methodology. Earlier scripts are retained for provenance, not as competing final definitions.
-

@@ -29,7 +29,7 @@
 │  ├─ used_inputs/          15개 데이터셋에서 실제 사용한 파일
 │  ├─ dataset_manifest.csv  출처·버전·공유 조건
 │  └─ file_manifest.csv     파일 크기·SHA-256
-├─ results/                 최종 결과 00–07 및 분석 보고서
+├─ results/                 최종 결과 00–08 및 분석 보고서
 ├─ docs/                    발표·참고 문서
 ├─ third_party_licenses/    확인된 원자료 라이선스
 └─ DATA_AVAILABILITY.md     공개·재배포 주의사항
@@ -46,6 +46,7 @@
 05 충돌 원인 3축 분석
 06 관계·원인 요약
 07 주요 충돌 개별 검증
+08 Research/Community 라벨링 패러다임 분석
 ANALYSIS_REPORT.md 최종 방법론과 해석
 ```
 

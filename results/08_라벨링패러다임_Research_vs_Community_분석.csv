@@ -1,0 +1,28 @@
+﻿분석 구분,항목,세부 그룹,비교 단위,분모,분자,비율(%),판정 및 해석,산출 기준
+패러다임 정의,Research-based,8 datasets,,,,,"논문·벤치마크 구축 과정에서 기존 seed, tag, graph 또는 연구 규칙을 사용한 데이터셋",BERT4ETH; DA-HGNN Phishing Detection Dataset; EthereumHeist; FDGNN Fraud Address Dataset; Forta Labelled Datasets; Phishing Detection on Ethereum (Trans2Vec); RiskProp; XBlock Ethereum Phishing Transaction Network
+패러다임 정의,Community-based,5 datasets,,,,,커뮤니티 신고·사기 registry 또는 이를 직접 계승한 데이터셋,Cryptocurrency Exchange Scams - Ethereum subset; EtherScamDB; Ethereum Illicit Accounts (Farrugia et al.); Real-CATS; scamsonethereum
+패러다임 정의,Unclassified,2 datasets,,,,,분석 목적이 다른 Dune 기반 행위 탐지와 OFAC Status 라벨은 패러다임 비교에서 제외,EX-Graph – Wash-Trading; OFAC Ethereum Addresses
+패러다임별 충돌률,구체 Behavior 유형 충돌,Research–Research,Pair-Address,18331,6,0.032731438546724126,동일 패러다임 내부 비교 결과,양쪽이 Abnormal·Behavior·구체 유형이며 표준 유형 구성요소의 교집합이 없으면 충돌
+패러다임별 충돌률,구체 Behavior 유형 충돌,Cross-paradigm,Pair-Address,23780,10323,43.41042893187553,서로 다른 패러다임 간 비교에서 충돌률이 가장 높음,양쪽이 Abnormal·Behavior·구체 유형이며 표준 유형 구성요소의 교집합이 없으면 충돌
+패러다임별 충돌률,구체 Behavior 유형 충돌,Community–Community,Pair-Address,2232,172,7.706093189964158,동일 패러다임 내부 비교 결과,양쪽이 Abnormal·Behavior·구체 유형이며 표준 유형 구성요소의 교집합이 없으면 충돌
+Root Source 공유 × 패러다임,구체 Behavior 유형 충돌,Research–Research / 공유됨,Pair-Address,18331,6,0.032731438546724126,Root Source 공유 여부를 함께 고려한 패러다임별 충돌률,동일·일부 공유=공유됨; 서로 다름=공유 안 됨
+Root Source 공유 × 패러다임,구체 Behavior 유형 충돌,Cross-paradigm / 공유됨,Pair-Address,17599,5849,33.2348428888005,Root Source 공유 여부를 함께 고려한 패러다임별 충돌률,동일·일부 공유=공유됨; 서로 다름=공유 안 됨
+Root Source 공유 × 패러다임,구체 Behavior 유형 충돌,Cross-paradigm / 공유 안 됨,Pair-Address,6181,4474,72.3831095292024,Root Source 공유 여부를 함께 고려한 패러다임별 충돌률,동일·일부 공유=공유됨; 서로 다름=공유 안 됨
+Root Source 공유 × 패러다임,구체 Behavior 유형 충돌,Community–Community / 공유 안 됨,Pair-Address,2132,162,7.598499061913697,Root Source 공유 여부를 함께 고려한 패러다임별 충돌률,동일·일부 공유=공유됨; 서로 다름=공유 안 됨
+Root Source 공유 × 패러다임,구체 Behavior 유형 충돌,Community–Community / 공유됨,Pair-Address,100,10,10.0,Root Source 공유 여부를 함께 고려한 패러다임별 충돌률,동일·일부 공유=공유됨; 서로 다름=공유 안 됨
+Research 라벨 집중도,BERT4ETH,,Dataset-Address,5431,5431,100.0,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,DA-HGNN Phishing Detection Dataset,,Dataset-Address,992,992,100.0,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,EthereumHeist,,Dataset-Address,108,1,0.9259259259259258,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,FDGNN Fraud Address Dataset,,Dataset-Address,1657,1627,98.18949909474955,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,Forta Labelled Datasets,,Dataset-Address,6532,6355,97.2902633190447,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,Phishing Detection on Ethereum (Trans2Vec),,Dataset-Address,1207,1207,100.0,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,RiskProp,,Dataset-Address,237,237,100.0,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,XBlock Ethereum Phishing Transaction Network,,Dataset-Address,1124,1124,100.0,Abnormal 주소 중 표준 유형에 Phishing이 포함된 비율,03 교집합 파일의 Dataset cell 기준
+Research 라벨 집중도,Research 전체,,Dataset-Address,17288,16974,98.18371124479408,Research 진영의 Abnormal 라벨이 Phishing 중심으로 구성됨,8개 Research 데이터셋의 Abnormal Dataset-Address 합계
+Community taxonomy 효과,Real-CATS,,Address,6401,2000,31.24511795032026,Phishing 비포함 주소 비율 32.6043%. 충돌률이 Community 측 taxonomy 선택과 밀접함,해당 Community 주소의 모든 Research 비교가 충돌할 때 주소 충돌로 집계
+Community taxonomy 효과,EtherScamDB,,Address,2056,1469,71.44941634241245,Phishing 비포함 주소 비율 71.4494%. 충돌률이 Community 측 taxonomy 선택과 밀접함,해당 Community 주소의 모든 Research 비교가 충돌할 때 주소 충돌로 집계
+Community taxonomy 효과,Cryptocurrency Exchange Scams - Ethereum subset,,Address,110,110,100.0,Phishing 비포함 주소 비율 100.0000%. 충돌률이 Community 측 taxonomy 선택과 밀접함,해당 Community 주소의 모든 Research 비교가 충돌할 때 주소 충돌로 집계
+Cross-paradigm 충돌 구성,Scam ↔ Phishing,,Pair-Address,10323,6990,67.71287416448708,복합 표준 유형을 보존한 현재 기준의 충돌 구성,Cross-paradigm 구체 Behavior Type Conflict
+Cross-paradigm 충돌 구성,Scam ↔ Hack/Exploit | Phishing,,Pair-Address,10323,3323,32.190254770899934,복합 표준 유형을 보존한 현재 기준의 충돌 구성,Cross-paradigm 구체 Behavior Type Conflict
+Cross-paradigm 충돌 구성,기타,,Pair-Address,10323,10,0.0968710646130001,복합 표준 유형을 보존한 현재 기준의 충돌 구성,Cross-paradigm 구체 Behavior Type Conflict
+Cross-paradigm 충돌 구성,Scam ↔ Phishing 포함 Research 라벨 합계,,Pair-Address,10323,10313,99.903128935387,Cross-paradigm 충돌의 거의 전부가 Scam과 Phishing 포함 라벨 사이에서 발생,Phishing 단일형과 Hack/Exploit | Phishing 복합형을 모두 포함
